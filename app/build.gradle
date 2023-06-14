@@ -4,6 +4,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\amand\\StudioProjects\\MatchTime\\store\\match-app-key.jks')
+            storePassword '12345678'
+            keyPassword '12345678'
+            keyAlias 'match-app'
+        }
+    }
     namespace 'com.amanddaluz.classease'
     compileSdk 33
 
@@ -18,8 +26,20 @@ android {
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            debuggable true
+        }
+        staging {
+            initWith debug
+            minifyEnabled true
+            applicationIdSuffix '.staging'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-rules-staging.pro'
+        }
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            shrinkResources true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -29,6 +49,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled true
     }
 }
 
