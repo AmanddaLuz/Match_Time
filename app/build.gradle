@@ -6,7 +6,8 @@ plugins {
 android {
     signingConfigs {
         release {
-            storeFile file('C:\\Users\\amand\\StudioProjects\\MatchTime\\store\\match-app-key.jks')
+            storeFile file('\\...\\store\\match-app-key.jks')
+            //storeFile file('C:\\Users\\amand\\StudioProjects\\MatchTime\\store\\match-app-key.jks')
             storePassword '12345678'
             keyPassword '12345678'
             keyAlias 'match-app'
