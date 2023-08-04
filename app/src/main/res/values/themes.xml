@@ -36,10 +36,10 @@
     </style>
 
     <style name="Tab">
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="tabGravity">center</item>
         <item name="android:gravity">center</item>
-        <item name="textAllCaps">false</item>
+        <item name="textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
     </style>
 </resources>

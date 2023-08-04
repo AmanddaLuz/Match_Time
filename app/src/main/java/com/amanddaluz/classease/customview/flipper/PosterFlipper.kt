@@ -1,11 +1,9 @@
 package com.amanddaluz.classease.customview.flipper
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ViewFlipper
-import com.amanddaluz.classease.R
 import com.amanddaluz.classease.databinding.ItemPosterBinding
 import com.bumptech.glide.Glide
 
@@ -28,7 +26,7 @@ class PosterFlipper(context: Context, attrs: AttributeSet?) : ViewFlipper(contex
                 titlePoster.text = it.title
 
                 Glide.with(context)
-                    .load(R.drawable.ic_launcher_background)
+                    .load(it.imageUrl)
                     .centerCrop()
                     .into(ivPoster)
 
@@ -44,6 +42,6 @@ class PosterFlipper(context: Context, attrs: AttributeSet?) : ViewFlipper(contex
     // Exemplo de classe que implementa a interface Item
     data class PosterDomain(
         val title: String,
-        val imageUrl: Drawable
+        val imageUrl: Int
     ) : Item
 }

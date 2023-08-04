@@ -3,7 +3,7 @@
     android:id="@+id/layout_dotted"
     android:layout_width="wrap_content"
     android:layout_height="36dp"
-    android:layout_margin="36dp"
-    android:layout_gravity="center"
+    android:layout_margin="12dp"
+    android:layout_gravity="center_horizontal"
     android:orientation="horizontal" >
 </LinearLayout>

@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name"> </string>
+    <string name="app_name">Match Time</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="MatchTime">Hello blank fragment</string>
     <string name="dot">&#8226;</string>
 </resources>

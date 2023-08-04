@@ -3,13 +3,12 @@ package com.amanddaluz.classease.fragments
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.GestureDetector
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.toDrawable
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.amanddaluz.classease.R
@@ -22,13 +21,13 @@ import com.google.android.material.tabs.TabLayoutMediator
 class MainFragment : Fragment() {
 
     private lateinit var binding : FragmentMainBinding
-    private val tabTitles = listOf("Cadastro de Profº,", "Restrições", "Preferências")
+    private val tabTitles = listOf("Cadastro", "Restrições", "Preferências")
     private val posterList: MutableList<PosterFlipper.PosterDomain> = mutableListOf(
         PosterFlipper.PosterDomain(
-            "Teste 1", R.drawable.ic_launcher_foreground.toDrawable()
+            "Teste 1", R.drawable.ic_launcher_foreground
         ),
         PosterFlipper.PosterDomain(
-            "Teste 2", R.drawable.ic_launcher_background.toDrawable()
+            "Teste 2", R.drawable.ic_launcher_background
         )
     )
 
@@ -66,7 +65,7 @@ class MainFragment : Fragment() {
     }
 
     private fun initToolbar(){
-        binding.toolbar.title = "MatchTime"
+        //binding.toolbar.title = "MatchTime"
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
     }
 
