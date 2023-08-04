@@ -1,2 +1,2 @@
 -dontobfuscate
--keepattributes
+-keepattributes *Anotations*
